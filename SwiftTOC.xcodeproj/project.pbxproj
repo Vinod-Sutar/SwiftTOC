@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */; };
+		17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6D1F632BF5006299DB /* AppDelegate.swift */; };
+		17EB8F701F632BF5006299DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6F1F632BF5006299DB /* ViewController.swift */; };
+		17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F711F632BF5006299DB /* Assets.xcassets */; };
+		17EB8F751F632BF5006299DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F731F632BF5006299DB /* Main.storyboard */; };
+		17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F7C1F63A2F9006299DB /* DummyToc.json */; };
+		17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F7E1F63A3E9006299DB /* TocCreator.swift */; };
+		17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F801F63A5AA006299DB /* Chapter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterEditViewController.swift; sourceTree = "<group>"; };
+		17EB8F6A1F632BF5006299DB /* SwiftTOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EB8F6D1F632BF5006299DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17EB8F6F1F632BF5006299DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17EB8F711F632BF5006299DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17EB8F741F632BF5006299DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17EB8F761F632BF5006299DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17EB8F7C1F63A2F9006299DB /* DummyToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyToc.json; sourceTree = "<group>"; };
+		17EB8F7E1F63A3E9006299DB /* TocCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TocCreator.swift; sourceTree = "<group>"; };
+		17EB8F801F63A5AA006299DB /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17EB8F671F632BF5006299DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17EB8F611F632BF5006299DB = {
+			isa = PBXGroup;
+			children = (
+				17EB8F6C1F632BF5006299DB /* SwiftTOC */,
+				17EB8F6B1F632BF5006299DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17EB8F6B1F632BF5006299DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17EB8F6A1F632BF5006299DB /* SwiftTOC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17EB8F6C1F632BF5006299DB /* SwiftTOC */ = {
+			isa = PBXGroup;
+			children = (
+				17EB8F7C1F63A2F9006299DB /* DummyToc.json */,
+				17EB8F6D1F632BF5006299DB /* AppDelegate.swift */,
+				17EB8F6F1F632BF5006299DB /* ViewController.swift */,
+				17EB8F711F632BF5006299DB /* Assets.xcassets */,
+				17EB8F731F632BF5006299DB /* Main.storyboard */,
+				17EB8F761F632BF5006299DB /* Info.plist */,
+				17EB8F7E1F63A3E9006299DB /* TocCreator.swift */,
+				17EB8F801F63A5AA006299DB /* Chapter.swift */,
+				17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */,
+			);
+			path = SwiftTOC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17EB8F691F632BF5006299DB /* SwiftTOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17EB8F791F632BF5006299DB /* Build configuration list for PBXNativeTarget "SwiftTOC" */;
+			buildPhases = (
+				17EB8F661F632BF5006299DB /* Sources */,
+				17EB8F671F632BF5006299DB /* Frameworks */,
+				17EB8F681F632BF5006299DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTOC;
+			productName = SwiftTOC;
+			productReference = 17EB8F6A1F632BF5006299DB /* SwiftTOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17EB8F621F632BF5006299DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Vinod Sutar";
+				TargetAttributes = {
+					17EB8F691F632BF5006299DB = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8CD4S7H2U8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 17EB8F651F632BF5006299DB /* Build configuration list for PBXProject "SwiftTOC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17EB8F611F632BF5006299DB;
+			productRefGroup = 17EB8F6B1F632BF5006299DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17EB8F691F632BF5006299DB /* SwiftTOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17EB8F681F632BF5006299DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */,
+				17EB8F751F632BF5006299DB /* Main.storyboard in Resources */,
+				17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17EB8F661F632BF5006299DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EB8F701F632BF5006299DB /* ViewController.swift in Sources */,
+				17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */,
+				17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */,
+				17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */,
+				17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17EB8F731F632BF5006299DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17EB8F741F632BF5006299DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17EB8F771F632BF5006299DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17EB8F781F632BF5006299DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		17EB8F7A1F632BF5006299DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8CD4S7H2U8;
+				INFOPLIST_FILE = SwiftTOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinod.SwiftTOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17EB8F7B1F632BF5006299DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8CD4S7H2U8;
+				INFOPLIST_FILE = SwiftTOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinod.SwiftTOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17EB8F651F632BF5006299DB /* Build configuration list for PBXProject "SwiftTOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EB8F771F632BF5006299DB /* Debug */,
+				17EB8F781F632BF5006299DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17EB8F791F632BF5006299DB /* Build configuration list for PBXNativeTarget "SwiftTOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EB8F7A1F632BF5006299DB /* Debug */,
+				17EB8F7B1F632BF5006299DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17EB8F621F632BF5006299DB /* Project object */;
+}

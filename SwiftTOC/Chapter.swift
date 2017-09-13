@@ -10,31 +10,53 @@ import Cocoa
 
 class Chapter: NSObject {
     
-    let id: String!
-    var name: String!
-    let htmlPage: String!
-    var chapters: [Chapter]!
+    var id: String = ""
+    var name: String = ""
+    var tocName: String = ""
+    var mailEnabled: Bool = false
+    var PDFEnabled: Bool = false
+    var htmlPage: String = ""
+    var chapters: [Chapter] = []
     var textColor = NSColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
     
     override init() {
-        
-        id = nil
-        name = ""
-        htmlPage = ""
-        chapters = []
     }
     
     init(_ chapterDictionary: NSDictionary) {
         
-        id = chapterDictionary["id"] as? String
-        name = chapterDictionary["name"] as? String
-        htmlPage = chapterDictionary["htmlPage"] as? String
-        chapters = []
+        id = chapterDictionary["id"] as! String
+        name = chapterDictionary["name"] as! String
+        htmlPage = chapterDictionary["htmlPage"] as! String
+        
+        if let isMailEnabled = chapterDictionary["mailEnabled"] {
+            
+            mailEnabled = isMailEnabled as! Bool
+        }
+        
+        if let isPDFEnabled = chapterDictionary["PDFEnabled"] {
+            
+            PDFEnabled = isPDFEnabled as! Bool
+        }
         
     }
     
     func tocDisplayName() -> String {
-        return isChapter() ? "📄 \(name!)" : name
+        
+        var emojiString = ""
+        
+        if isChapter() {
+            emojiString = "📋"
+        }
+        
+        if mailEnabled {
+            emojiString = emojiString + "📪"
+        }
+        
+        if PDFEnabled {
+            emojiString = emojiString + "📚"
+        }
+        
+        return isChapter() ? emojiString + " " + name : name
     }
     
     func isChapter() -> Bool {

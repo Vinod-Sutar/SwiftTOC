@@ -15,6 +15,7 @@
 		17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F7C1F63A2F9006299DB /* DummyToc.json */; };
 		17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F7E1F63A3E9006299DB /* TocCreator.swift */; };
 		17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F801F63A5AA006299DB /* Chapter.swift */; };
+		496C27591F69260500F922CF /* GuidelineOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C27581F69260500F922CF /* GuidelineOutlineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		17EB8F7C1F63A2F9006299DB /* DummyToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyToc.json; sourceTree = "<group>"; };
 		17EB8F7E1F63A3E9006299DB /* TocCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TocCreator.swift; sourceTree = "<group>"; };
 		17EB8F801F63A5AA006299DB /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		496C27581F69260500F922CF /* GuidelineOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidelineOutlineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				17EB8F7E1F63A3E9006299DB /* TocCreator.swift */,
 				17EB8F801F63A5AA006299DB /* Chapter.swift */,
 				17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */,
+				496C27581F69260500F922CF /* GuidelineOutlineView.swift */,
 			);
 			path = SwiftTOC;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496C27591F69260500F922CF /* GuidelineOutlineView.swift in Sources */,
 				17EB8F701F632BF5006299DB /* ViewController.swift in Sources */,
 				17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */,
 				17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */,

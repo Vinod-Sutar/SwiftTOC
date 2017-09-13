@@ -12,7 +12,9 @@ class ViewController: NSViewController {
     
     var rootChapters: [Chapter] = []
     
-    @IBOutlet var tocOutlineView: NSOutlineView!
+    @IBOutlet var splitView: NSSplitView!
+    
+    @IBOutlet var tocOutlineView: GuidelineOutlineView!
     
     @IBOutlet var treeController: NSTreeController!
     
@@ -29,6 +31,11 @@ class ViewController: NSViewController {
         setData("Valvular heart disease", guidelinTocPath: jsonFilePath3!)
         setData("Peripheral heart disease", guidelinTocPath: jsonFilePath4!)
         
+    }
+    
+    override func viewWillAppear() {
+        
+        //tocOutlineView.expandItem(nil, expandChildren: true)
     }
     
     func setData(_ guidelineName: String, guidelinTocPath: String) {
@@ -52,6 +59,17 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    
+    func editChapter() {
+        
+        print("Edit clicked")
+    }
+    
+    func deleteChapter() {
+        
+        print("Delete clicked")
     }
 }
 

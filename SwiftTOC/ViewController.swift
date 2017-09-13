@@ -16,6 +16,8 @@ class ViewController: NSViewController {
     
     @IBOutlet var tocOutlineView: GuidelineOutlineView!
     
+    @IBOutlet var chapterEditView: ChapterEditViewController!
+    
     @IBOutlet var treeController: NSTreeController!
     
     override func viewDidLoad() {
@@ -36,6 +38,8 @@ class ViewController: NSViewController {
     override func viewWillAppear() {
         
         //tocOutlineView.expandItem(nil, expandChildren: true)
+        
+        
     }
     
     func setData(_ guidelineName: String, guidelinTocPath: String) {

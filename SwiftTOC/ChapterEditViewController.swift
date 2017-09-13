@@ -10,7 +10,7 @@ import Cocoa
 
 class ChapterEditViewController: NSViewController {
 
-    var currentEditChapter: Chapter!
+    var currentEditChapter = Chapter()
     
     @IBOutlet var chapterNameTextField: NSTextField!
     
@@ -76,7 +76,7 @@ class ChapterEditViewController: NSViewController {
         if self.presenting is ViewController,
              let viewController = self.presenting as? ViewController {
             
-            viewController.tocOutlineView.reloadData()
+            viewController.tocOutlineView.reloadItem(currentEditChapter, reloadChildren: true)
             
         }
         

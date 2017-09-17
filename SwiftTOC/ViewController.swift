@@ -16,12 +16,20 @@ class ViewController: NSViewController {
     
     @IBOutlet var tocOutlineView: GuidelineOutlineView!
     
-    @IBOutlet var chapterEditView: ChapterEditViewController!
+    @IBOutlet var rightPaneContainerView: NSView!
     
     @IBOutlet var treeController: NSTreeController!
     
+    var currentRightPaneViewController: NSViewController!
+    
+    var quickHelpViewController: NSViewController!
+    
+    var selectedChapterEditViewController: ChapterEditViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(guidelineListUpdated), name: NSNotification.Name(rawValue: "GuidelineListUpdate"), object: nil)
         
         let jsonFilePath1 = Bundle.main.path(forResource: "DummyToc", ofType: "json")
         let jsonFilePath2 = Bundle.main.path(forResource: "DummyToc", ofType: "json")
@@ -33,6 +41,10 @@ class ViewController: NSViewController {
         setData("Valvular heart disease", guidelinTocPath: jsonFilePath3!)
         setData("Peripheral heart disease", guidelinTocPath: jsonFilePath4!)
         
+        quickHelpViewController = self.storyboard?.instantiateController(withIdentifier: "QuickHelpViewController") as! NSViewController
+        
+        selectedChapterEditViewController = self.storyboard?.instantiateController(withIdentifier: "ChapterEditViewController") as! ChapterEditViewController
+        
     }
     
     override func viewWillAppear() {
@@ -40,6 +52,11 @@ class ViewController: NSViewController {
         //tocOutlineView.expandItem(nil, expandChildren: true)
         
         
+    }
+    
+    func guidelineListUpdated() {
+        
+        tocOutlineView.reloadData()
     }
     
     func setData(_ guidelineName: String, guidelinTocPath: String) {
@@ -51,7 +68,10 @@ class ViewController: NSViewController {
         
         let dict:NSMutableDictionary = NSMutableDictionary(dictionary: root)
         
-        rootChapters = TocCreator().getRootChapter(URL(fileURLWithPath: guidelinTocPath))
+        let guideline = Guideline(guidelineName)
+        
+        
+        rootChapters = TocCreator().getRootChapter(guideline, jsonURL: URL(fileURLWithPath: guidelinTocPath))
         
         dict.setObject(rootChapters, forKey: "chapters" as NSCopying)
         
@@ -65,15 +85,31 @@ class ViewController: NSViewController {
         }
     }
     
-    
-    func editChapter() {
+    func setRightPaneWithControllerWithChapter(_ chapter: Chapter!) {
         
-        print("Edit clicked")
-    }
-    
-    func deleteChapter() {
+        if currentRightPaneViewController != nil {
+            
+            currentRightPaneViewController.view.removeFromSuperview()
+            currentRightPaneViewController.removeFromParentViewController()
+        }
         
-        print("Delete clicked")
+        
+        if chapter != nil {
+            
+            selectedChapterEditViewController.currentEditChapter = chapter
+            
+            self.addChildViewController(selectedChapterEditViewController)
+            selectedChapterEditViewController.view.frame = rightPaneContainerView.frame
+            rightPaneContainerView .addSubview(selectedChapterEditViewController.view)
+            currentRightPaneViewController = selectedChapterEditViewController
+        }
+        else if quickHelpViewController != nil{
+            
+            self.addChildViewController(quickHelpViewController)
+            quickHelpViewController.view.frame = rightPaneContainerView.frame
+            rightPaneContainerView .addSubview(quickHelpViewController.view)
+            currentRightPaneViewController = quickHelpViewController
+        }
     }
 }
 
@@ -166,6 +202,8 @@ extension ViewController: NSOutlineViewDelegate {
     func outlineViewSelectionDidChange(_ notification: Notification) {
         
         
+        var isSet = false
+        
         let tableView = notification.object
         
         if tableView is NSTableView,
@@ -181,23 +219,22 @@ extension ViewController: NSOutlineViewDelegate {
                     representedObject is Chapter,
                     case let selectedChapter = representedObject as! Chapter{
                     
-                    
                     if selectedChapter.isChapter() {
                         
-                        //print("clickedRowInTableView: \(selectedChapter.name!)")
+                        isSet = true
                         
-                        if let chapterEditViewController = self.storyboard?.instantiateController(withIdentifier: "ChapterEditViewController")  as? ChapterEditViewController {
-                            
-                            chapterEditViewController.currentEditChapter = selectedChapter
-                            self.presentViewControllerAsSheet(chapterEditViewController)
-                            
-                        }
-                        
-                        
+                        setRightPaneWithControllerWithChapter(selectedChapter)
                     }
                 }
             }
         }
+        
+        if isSet == false {
+            
+            setRightPaneWithControllerWithChapter(nil)
+        }
     }
 }
+
+
 

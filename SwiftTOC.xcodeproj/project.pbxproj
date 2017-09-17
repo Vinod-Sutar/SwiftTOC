@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E382A11F6E4EDF007F693F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E3829F1F6E4EDF007F693F /* Main.storyboard */; };
+		17E382A31F6E5EB6007F693F /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E382A21F6E5EB6007F693F /* Guideline.swift */; };
+		17E382A51F6EAA5D007F693F /* DummyNewToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17E382A41F6EAA5D007F693F /* DummyNewToc.json */; };
 		17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */; };
 		17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6D1F632BF5006299DB /* AppDelegate.swift */; };
 		17EB8F701F632BF5006299DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6F1F632BF5006299DB /* ViewController.swift */; };
 		17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F711F632BF5006299DB /* Assets.xcassets */; };
-		17EB8F751F632BF5006299DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F731F632BF5006299DB /* Main.storyboard */; };
 		17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F7C1F63A2F9006299DB /* DummyToc.json */; };
 		17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F7E1F63A3E9006299DB /* TocCreator.swift */; };
 		17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F801F63A5AA006299DB /* Chapter.swift */; };
@@ -19,12 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17E382A01F6E4EDF007F693F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17E382A21F6E5EB6007F693F /* Guideline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
+		17E382A41F6EAA5D007F693F /* DummyNewToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyNewToc.json; sourceTree = "<group>"; };
 		17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterEditViewController.swift; sourceTree = "<group>"; };
 		17EB8F6A1F632BF5006299DB /* SwiftTOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EB8F6D1F632BF5006299DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17EB8F6F1F632BF5006299DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		17EB8F711F632BF5006299DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17EB8F741F632BF5006299DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17EB8F761F632BF5006299DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17EB8F7C1F63A2F9006299DB /* DummyToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyToc.json; sourceTree = "<group>"; };
 		17EB8F7E1F63A3E9006299DB /* TocCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TocCreator.swift; sourceTree = "<group>"; };
@@ -62,13 +66,15 @@
 		17EB8F6C1F632BF5006299DB /* SwiftTOC */ = {
 			isa = PBXGroup;
 			children = (
+				17E382A41F6EAA5D007F693F /* DummyNewToc.json */,
 				17EB8F7C1F63A2F9006299DB /* DummyToc.json */,
 				17EB8F6D1F632BF5006299DB /* AppDelegate.swift */,
 				17EB8F6F1F632BF5006299DB /* ViewController.swift */,
+				17E3829F1F6E4EDF007F693F /* Main.storyboard */,
 				17EB8F711F632BF5006299DB /* Assets.xcassets */,
-				17EB8F731F632BF5006299DB /* Main.storyboard */,
 				17EB8F761F632BF5006299DB /* Info.plist */,
 				17EB8F7E1F63A3E9006299DB /* TocCreator.swift */,
+				17E382A21F6E5EB6007F693F /* Guideline.swift */,
 				17EB8F801F63A5AA006299DB /* Chapter.swift */,
 				17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */,
 				496C27581F69260500F922CF /* GuidelineOutlineView.swift */,
@@ -136,8 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E382A51F6EAA5D007F693F /* DummyNewToc.json in Resources */,
+				17E382A11F6E4EDF007F693F /* Main.storyboard in Resources */,
 				17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */,
-				17EB8F751F632BF5006299DB /* Main.storyboard in Resources */,
 				17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +158,7 @@
 			files = (
 				496C27591F69260500F922CF /* GuidelineOutlineView.swift in Sources */,
 				17EB8F701F632BF5006299DB /* ViewController.swift in Sources */,
+				17E382A31F6E5EB6007F693F /* Guideline.swift in Sources */,
 				17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */,
 				17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */,
 				17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */,
@@ -161,10 +169,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		17EB8F731F632BF5006299DB /* Main.storyboard */ = {
+		17E3829F1F6E4EDF007F693F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				17EB8F741F632BF5006299DB /* Base */,
+				17E382A01F6E4EDF007F693F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

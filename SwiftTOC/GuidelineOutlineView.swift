@@ -36,6 +36,9 @@ class GuidelineOutlineView: NSOutlineView {
                         let menu = NSMenu(title: "Context menu")
                         
                         menu.insertItem(withTitle: "Delete", action: #selector(deleteChapter), keyEquivalent: "", at: 0)
+                        
+                        menu.insertItem(NSMenuItem.separator(), at: 0)
+                        
                         menu.insertItem(withTitle: "Edit", action: #selector(editChapter), keyEquivalent: "", at: 0)
                         
                         return menu;

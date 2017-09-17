@@ -29,6 +29,10 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tocOutlineView.register(forDraggedTypes: [NSPasteboardTypeString])
+        
+        tocOutlineView.setDraggingSourceOperationMask(.every, forLocal: true)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(guidelineListUpdated), name: NSNotification.Name(rawValue: "GuidelineListUpdate"), object: nil)
         
         let jsonFilePath1 = Bundle.main.path(forResource: "DummyToc", ofType: "json")
@@ -51,6 +55,13 @@ class ViewController: NSViewController {
         
         //tocOutlineView.expandItem(nil, expandChildren: true)
         
+        //GuidelineTOCDownloader.shared.
+        
+        let cmsURL: URL = URL(string: "http://cpms.bbinfotech.com/CMS/handshake/cms_viewer/CMSoverviewAppRequestHandler.php")!
+        
+        HTTPRequestManager().sendRequest(cmsURL)
+        
+        setRightPaneWithControllerWithChapter(nil)
         
     }
     
@@ -233,6 +244,59 @@ extension ViewController: NSOutlineViewDelegate {
             
             setRightPaneWithControllerWithChapter(nil)
         }
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, pasteboardWriterForItem item: Any) -> NSPasteboardWriting?
+    {
+        
+        let pb = NSPasteboardItem()
+        
+        if let chapter = ((item as? NSTreeNode)?.representedObject) as? Chapter {
+            
+            pb.setString(chapter.id, forType: NSPasteboardTypeString)
+            return pb
+        }
+        
+        return nil
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, validateDrop info: NSDraggingInfo, proposedItem item: Any?, proposedChildIndex index: Int) -> NSDragOperation {
+        
+        return NSDragOperation.move
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, acceptDrop info: NSDraggingInfo, item: Any?, childIndex index: Int) -> Bool {
+        
+        let pb = info.draggingPasteboard()
+        let chapterID = pb.string(forType: NSPasteboardTypeString)
+        
+        var sourceNode: NSTreeNode?
+        
+        if let item = item as? NSTreeNode,
+            item.children != nil {
+         
+            
+            for node in item.children! {
+                
+                if let chapter = node.representedObject as? Chapter,
+                    chapter.id == chapterID {
+                    sourceNode = node
+                }
+            }
+        }
+        
+        if sourceNode == nil {
+            
+            return false
+        }
+     
+        
+        
+        //let indexArr: [Int] = [0, index]
+        //let toIndexPath = NSIndexPath(indexes: indexArr, length: 2) as IndexPath
+        //treeController.move(sourceNode!, to: toIndexPath)
+        
+        return true
     }
 }
 

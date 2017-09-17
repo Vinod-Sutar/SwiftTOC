@@ -683,36 +683,36 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SwiftTOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1254" height="409"/>
+                        <rect key="frame" x="0.0" y="0.0" width="925" height="484"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="AQE-7x-Ijo">
-                                <rect key="frame" x="0.0" y="0.0" width="1254" height="409"/>
+                                <rect key="frame" x="0.0" y="0.0" width="925" height="484"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-Ph-K10">
-                                        <rect key="frame" x="0.0" y="376" width="1254" height="5"/>
+                                        <rect key="frame" x="0.0" y="451" width="925" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wST-Ah-vxR"/>
                                         </constraints>
                                     </box>
                                     <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ef4-DD-u97">
-                                        <rect key="frame" x="0.0" y="0.0" width="1254" height="378"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="925" height="453"/>
                                         <subviews>
                                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="5Lv-hZ-fZY">
-                                                <rect key="frame" x="0.0" y="0.0" width="317" height="378"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="453"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="qgW-Tn-t2H">
-                                                    <rect key="frame" x="0.0" y="0.0" width="317" height="378"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="209.5" height="453"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="wzj-F1-7vg" id="VtZ-Pb-LFo" customClass="GuidelineOutlineView" customModule="SwiftTOC" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="317" height="378"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="209.5" height="453"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="4"/>
                                                             <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="314" minWidth="16" maxWidth="1000" id="wzj-F1-7vg">
+                                                                <tableColumn width="206.5" minWidth="16" maxWidth="1000" id="wzj-F1-7vg">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -726,11 +726,11 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="HeaderCell" id="C5p-58-qch">
-                                                                            <rect key="frame" x="1" y="2" width="314" height="20"/>
+                                                                            <rect key="frame" x="1" y="2" width="206.5" height="20"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BN4-Sj-ltc">
-                                                                                    <rect key="frame" x="3" y="0.0" width="314" height="20"/>
+                                                                                    <rect key="frame" x="3" y="0.0" width="206" height="20"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="20" id="fNe-px-n3l"/>
                                                                                     </constraints>
@@ -754,11 +754,11 @@
                                                                             </connections>
                                                                         </tableCellView>
                                                                         <tableCellView identifier="DataCell" id="5gM-QI-d9P">
-                                                                            <rect key="frame" x="1" y="26" width="314" height="13"/>
+                                                                            <rect key="frame" x="1" y="26" width="206.5" height="13"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zi5-ZR-X8h">
-                                                                                    <rect key="frame" x="3" y="-4" width="316" height="18"/>
+                                                                                    <rect key="frame" x="3" y="-4" width="208" height="18"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="18" id="Z0M-oM-pbx"/>
                                                                                     </constraints>
@@ -798,7 +798,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Jf1-ln-X8Y"/>
                                                 </constraints>
                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="H01-u2-glq">
-                                                    <rect key="frame" x="0.0" y="1" width="312" height="16"/>
+                                                    <rect key="frame" x="0.0" y="437" width="192" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="EfM-nO-DE9">
@@ -807,15 +807,15 @@
                                                 </scroller>
                                             </scrollView>
                                             <customView fixedFrame="YES" id="QAY-aI-5cB">
-                                                <rect key="frame" x="318" y="0.0" width="651.5" height="378"/>
+                                                <rect key="frame" x="210.5" y="0.0" width="430" height="453"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             </customView>
                                             <customView id="9N1-Lv-waU">
-                                                <rect key="frame" x="970.5" y="0.0" width="283.5" height="378"/>
+                                                <rect key="frame" x="641.5" y="0.0" width="283.5" height="453"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <subviews>
                                                     <containerView translatesAutoresizingMaskIntoConstraints="NO" id="whg-Tm-tR1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="378"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="453"/>
                                                     </containerView>
                                                 </subviews>
                                                 <constraints>
@@ -867,7 +867,7 @@
                 </treeController>
                 <customObject id="oUU-Na-wJl" userLabel="chapters" customClass="NSMutableArray"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1360.5"/>
+            <point key="canvasLocation" x="-142.5" y="1398"/>
         </scene>
         <!--Chapter Edit View Controller-->
         <scene sceneID="SQk-cB-Ys6">
@@ -1142,7 +1142,7 @@
                 </viewController>
                 <customObject id="otp-PA-iBf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="1836"/>
+            <point key="canvasLocation" x="75" y="2203"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PVx-Nd-0DS">
@@ -1195,7 +1195,7 @@
                 </viewController>
                 <customObject id="wJ6-BJ-xw9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="1784"/>
+            <point key="canvasLocation" x="753" y="2130"/>
         </scene>
     </scenes>
 </document>

@@ -8,36 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		17E382A11F6E4EDF007F693F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E3829F1F6E4EDF007F693F /* Main.storyboard */; };
-		17E382A31F6E5EB6007F693F /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E382A21F6E5EB6007F693F /* Guideline.swift */; };
-		17E382A51F6EAA5D007F693F /* DummyNewToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17E382A41F6EAA5D007F693F /* DummyNewToc.json */; };
 		17E382A81F6EC7E6007F693F /* GuidelineTOCDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E382A71F6EC7E5007F693F /* GuidelineTOCDownloader.swift */; };
-		17E382AA1F6EC907007F693F /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E382A91F6EC907007F693F /* HTTPRequestManager.swift */; };
-		17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */; };
 		17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6D1F632BF5006299DB /* AppDelegate.swift */; };
-		17EB8F701F632BF5006299DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F6F1F632BF5006299DB /* ViewController.swift */; };
 		17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F711F632BF5006299DB /* Assets.xcassets */; };
-		17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 17EB8F7C1F63A2F9006299DB /* DummyToc.json */; };
-		17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F7E1F63A3E9006299DB /* TocCreator.swift */; };
-		17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB8F801F63A5AA006299DB /* Chapter.swift */; };
-		496C27591F69260500F922CF /* GuidelineOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C27581F69260500F922CF /* GuidelineOutlineView.swift */; };
+		494E89251F6FE8EB009C6A05 /* DummyNewToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 494E89231F6FE8EB009C6A05 /* DummyNewToc.json */; };
+		494E89261F6FE8EB009C6A05 /* DummyToc.json in Resources */ = {isa = PBXBuildFile; fileRef = 494E89241F6FE8EB009C6A05 /* DummyToc.json */; };
+		494E892A1F6FE90D009C6A05 /* ChapterEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89271F6FE90D009C6A05 /* ChapterEditViewController.swift */; };
+		494E892B1F6FE90D009C6A05 /* GuidelineOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89281F6FE90D009C6A05 /* GuidelineOutlineView.swift */; };
+		494E892C1F6FE90D009C6A05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89291F6FE90D009C6A05 /* ViewController.swift */; };
+		494E89301F6FE92C009C6A05 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E892D1F6FE92C009C6A05 /* App.swift */; };
+		494E89311F6FE92C009C6A05 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E892E1F6FE92C009C6A05 /* Chapter.swift */; };
+		494E89321F6FE92C009C6A05 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E892F1F6FE92C009C6A05 /* Guideline.swift */; };
+		494E89341F6FE93B009C6A05 /* TocCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89331F6FE93B009C6A05 /* TocCreator.swift */; };
+		494E89381F6FE96C009C6A05 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89361F6FE96C009C6A05 /* HTTPRequest.swift */; };
+		494E89391F6FE96C009C6A05 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E89371F6FE96C009C6A05 /* HTTPRequestManager.swift */; };
+		494E893B1F6FEBDE009C6A05 /* GuidelineListDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E893A1F6FEBDE009C6A05 /* GuidelineListDownloader.swift */; };
+		494E893D1F6FF3D9009C6A05 /* AppListDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E893C1F6FF3D9009C6A05 /* AppListDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17E382A01F6E4EDF007F693F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17E382A21F6E5EB6007F693F /* Guideline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
-		17E382A41F6EAA5D007F693F /* DummyNewToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyNewToc.json; sourceTree = "<group>"; };
 		17E382A71F6EC7E5007F693F /* GuidelineTOCDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidelineTOCDownloader.swift; sourceTree = "<group>"; };
-		17E382A91F6EC907007F693F /* HTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
-		17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterEditViewController.swift; sourceTree = "<group>"; };
 		17EB8F6A1F632BF5006299DB /* SwiftTOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EB8F6D1F632BF5006299DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17EB8F6F1F632BF5006299DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		17EB8F711F632BF5006299DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EB8F761F632BF5006299DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17EB8F7C1F63A2F9006299DB /* DummyToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyToc.json; sourceTree = "<group>"; };
-		17EB8F7E1F63A3E9006299DB /* TocCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TocCreator.swift; sourceTree = "<group>"; };
-		17EB8F801F63A5AA006299DB /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
-		496C27581F69260500F922CF /* GuidelineOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidelineOutlineView.swift; sourceTree = "<group>"; };
+		494E89231F6FE8EB009C6A05 /* DummyNewToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyNewToc.json; sourceTree = "<group>"; };
+		494E89241F6FE8EB009C6A05 /* DummyToc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyToc.json; sourceTree = "<group>"; };
+		494E89271F6FE90D009C6A05 /* ChapterEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterEditViewController.swift; sourceTree = "<group>"; };
+		494E89281F6FE90D009C6A05 /* GuidelineOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidelineOutlineView.swift; sourceTree = "<group>"; };
+		494E89291F6FE90D009C6A05 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		494E892D1F6FE92C009C6A05 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		494E892E1F6FE92C009C6A05 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		494E892F1F6FE92C009C6A05 /* Guideline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
+		494E89331F6FE93B009C6A05 /* TocCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TocCreator.swift; sourceTree = "<group>"; };
+		494E89361F6FE96C009C6A05 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		494E89371F6FE96C009C6A05 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
+		494E893A1F6FEBDE009C6A05 /* GuidelineListDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidelineListDownloader.swift; sourceTree = "<group>"; };
+		494E893C1F6FF3D9009C6A05 /* AppListDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,10 @@
 		17E382A61F6EC7D4007F693F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				494E89351F6FE96C009C6A05 /* HTTPRequest */,
+				494E893C1F6FF3D9009C6A05 /* AppListDownloader.swift */,
+				494E893A1F6FEBDE009C6A05 /* GuidelineListDownloader.swift */,
 				17E382A71F6EC7E5007F693F /* GuidelineTOCDownloader.swift */,
-				17E382A91F6EC907007F693F /* HTTPRequestManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -79,21 +89,63 @@
 		17EB8F6C1F632BF5006299DB /* SwiftTOC */ = {
 			isa = PBXGroup;
 			children = (
+				494E89221F6FE8EB009C6A05 /* Data */,
+				494E89211F6FE858009C6A05 /* View */,
+				494E891F1F6FE830009C6A05 /* Modal */,
+				494E89201F6FE846009C6A05 /* Controller */,
 				17E382A61F6EC7D4007F693F /* API */,
-				17E382A41F6EAA5D007F693F /* DummyNewToc.json */,
-				17EB8F7C1F63A2F9006299DB /* DummyToc.json */,
 				17EB8F6D1F632BF5006299DB /* AppDelegate.swift */,
-				17EB8F6F1F632BF5006299DB /* ViewController.swift */,
 				17E3829F1F6E4EDF007F693F /* Main.storyboard */,
 				17EB8F711F632BF5006299DB /* Assets.xcassets */,
 				17EB8F761F632BF5006299DB /* Info.plist */,
-				17EB8F7E1F63A3E9006299DB /* TocCreator.swift */,
-				17E382A21F6E5EB6007F693F /* Guideline.swift */,
-				17EB8F801F63A5AA006299DB /* Chapter.swift */,
-				17E605CA1F67087700586CD6 /* ChapterEditViewController.swift */,
-				496C27581F69260500F922CF /* GuidelineOutlineView.swift */,
 			);
 			path = SwiftTOC;
+			sourceTree = "<group>";
+		};
+		494E891F1F6FE830009C6A05 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				494E892D1F6FE92C009C6A05 /* App.swift */,
+				494E892E1F6FE92C009C6A05 /* Chapter.swift */,
+				494E892F1F6FE92C009C6A05 /* Guideline.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		494E89201F6FE846009C6A05 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				494E89331F6FE93B009C6A05 /* TocCreator.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		494E89211F6FE858009C6A05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				494E89271F6FE90D009C6A05 /* ChapterEditViewController.swift */,
+				494E89281F6FE90D009C6A05 /* GuidelineOutlineView.swift */,
+				494E89291F6FE90D009C6A05 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		494E89221F6FE8EB009C6A05 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				494E89231F6FE8EB009C6A05 /* DummyNewToc.json */,
+				494E89241F6FE8EB009C6A05 /* DummyToc.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		494E89351F6FE96C009C6A05 /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				494E89361F6FE96C009C6A05 /* HTTPRequest.swift */,
+				494E89371F6FE96C009C6A05 /* HTTPRequestManager.swift */,
+			);
+			path = HTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E382A51F6EAA5D007F693F /* DummyNewToc.json in Resources */,
 				17E382A11F6E4EDF007F693F /* Main.storyboard in Resources */,
 				17EB8F721F632BF5006299DB /* Assets.xcassets in Resources */,
-				17EB8F7D1F63A2F9006299DB /* DummyToc.json in Resources */,
+				494E89251F6FE8EB009C6A05 /* DummyNewToc.json in Resources */,
+				494E89261F6FE8EB009C6A05 /* DummyToc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,15 +222,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496C27591F69260500F922CF /* GuidelineOutlineView.swift in Sources */,
-				17EB8F701F632BF5006299DB /* ViewController.swift in Sources */,
+				494E89321F6FE92C009C6A05 /* Guideline.swift in Sources */,
+				494E893B1F6FEBDE009C6A05 /* GuidelineListDownloader.swift in Sources */,
+				494E89341F6FE93B009C6A05 /* TocCreator.swift in Sources */,
+				494E89301F6FE92C009C6A05 /* App.swift in Sources */,
+				494E89311F6FE92C009C6A05 /* Chapter.swift in Sources */,
 				17E382A81F6EC7E6007F693F /* GuidelineTOCDownloader.swift in Sources */,
-				17E382A31F6E5EB6007F693F /* Guideline.swift in Sources */,
+				494E892B1F6FE90D009C6A05 /* GuidelineOutlineView.swift in Sources */,
+				494E892C1F6FE90D009C6A05 /* ViewController.swift in Sources */,
+				494E89381F6FE96C009C6A05 /* HTTPRequest.swift in Sources */,
+				494E893D1F6FF3D9009C6A05 /* AppListDownloader.swift in Sources */,
 				17EB8F6E1F632BF5006299DB /* AppDelegate.swift in Sources */,
-				17E605CB1F67087700586CD6 /* ChapterEditViewController.swift in Sources */,
-				17EB8F7F1F63A3E9006299DB /* TocCreator.swift in Sources */,
-				17EB8F811F63A5AA006299DB /* Chapter.swift in Sources */,
-				17E382AA1F6EC907007F693F /* HTTPRequestManager.swift in Sources */,
+				494E89391F6FE96C009C6A05 /* HTTPRequestManager.swift in Sources */,
+				494E892A1F6FE90D009C6A05 /* ChapterEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

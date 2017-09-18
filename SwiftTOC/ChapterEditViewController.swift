@@ -12,6 +12,8 @@ class ChapterEditViewController: NSViewController {
 
     var currentEditChapter = Chapter()
     
+    @IBOutlet var guidelineNameTextField: NSTextField!
+    
     @IBOutlet var chapterNameTextField: NSTextField!
     
     @IBOutlet var tocChapterNameTextField: NSTextField!
@@ -19,7 +21,6 @@ class ChapterEditViewController: NSViewController {
     @IBOutlet var PDFEnabledButton: NSButton!
     
     @IBOutlet var mailEnabledButton: NSButton!
-    
     
     @IBOutlet var recipientsTextField: NSTextField!
     
@@ -29,12 +30,15 @@ class ChapterEditViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do view setup here.
     }
     
     override func viewWillAppear() {
         super.viewWillAppear()
         
+        guidelineNameTextField.stringValue = currentEditChapter.guideline.name
         chapterNameTextField.stringValue = currentEditChapter.name
         tocChapterNameTextField.placeholderString = currentEditChapter.name
         tocChapterNameTextField.stringValue = currentEditChapter.tocName
@@ -42,45 +46,70 @@ class ChapterEditViewController: NSViewController {
         mailEnabledButton.state = currentEditChapter.mailEnabled ? NSOnState : NSOffState
         PDFEnabledButton.state = currentEditChapter.PDFEnabled ? NSOnState : NSOffState
         
-        self.mailEnabledClicked(mailEnabledButton)
+        setMailView()
+    }
+    
+    
+    @IBAction func textFieldEditDone(_ sender: NSTextField) {
+                
+        if sender == chapterNameTextField {
+            
+            currentEditChapter.setChapterName(chapterNameTextField.stringValue)
+        }
+        else if sender == tocChapterNameTextField {
+            
+            currentEditChapter.tocName = tocChapterNameTextField.stringValue
+        }
+        else if sender == recipientsTextField {
+            
+            recipientsTextField.stringValue = recipientsTextField.stringValue.replacingOccurrences(of: " ", with: "")
+            recipientsTextField.stringValue = recipientsTextField.stringValue.replacingOccurrences(of: ",", with: ", ")
+            
+        }
+        else if sender == subjectTextField {
+            
+        }
+        else if sender == bodyTextField {
+            
+        }
+        
+        postChapterUpdatedNotification()
+    }
+    
+    
+    @IBAction func PDFEnabledClicked(_ sender: Any) {
+
+        currentEditChapter.PDFEnabled = PDFEnabledButton.state == NSOnState ? true : false
+
+        postChapterUpdatedNotification()
+    }
+    
+    func setMailView() {
+        
+        recipientsTextField.isEnabled = currentEditChapter.mailEnabled
+        subjectTextField.isEnabled = currentEditChapter.mailEnabled
+        bodyTextField.isEnabled = currentEditChapter.mailEnabled
     }
     
     @IBAction func mailEnabledClicked(_ sender: Any) {
         
-        var isEnabled = false
+        currentEditChapter.mailEnabled = mailEnabledButton.state == NSOnState ? true : false
         
-        if mailEnabledButton.state == NSOnState {
-            
-            isEnabled = true
-        }
+        setMailView()
         
-        recipientsTextField.isEnabled = isEnabled
-        subjectTextField.isEnabled = isEnabled
-        bodyTextField.isEnabled = isEnabled
-        
-        
-    }
-    
-    @IBAction func cancelClicked(_ sender: Any) {
-        
-        self.dismiss(nil)
+        postChapterUpdatedNotification()
     }
     
     @IBAction func doneClicked(_ sender: Any) {
+       
         
-        currentEditChapter.setChapterName(chapterNameTextField.stringValue)
-        currentEditChapter.tocName = tocChapterNameTextField.stringValue
-        currentEditChapter.mailEnabled = mailEnabledButton.state == NSOnState ? true : false
-        currentEditChapter.PDFEnabled = PDFEnabledButton.state == NSOnState ? true : false
         
-        if self.presenting is ViewController,
-             let viewController = self.presenting as? ViewController {
-            
-            viewController.tocOutlineView.reloadItem(currentEditChapter, reloadChildren: true)
-            
-        }
+        postChapterUpdatedNotification()
+    }
+    
+    func postChapterUpdatedNotification() {
         
-        self.dismiss(self)
+        NotificationCenter.default.post(name: NSNotification.Name("GuidelineListUpdate"), object: nil)
     }
 }
 
@@ -89,5 +118,7 @@ extension ChapterEditViewController : NSTextFieldDelegate {
     override func controlTextDidChange(_ obj: Notification) {
         
         tocChapterNameTextField.placeholderString = chapterNameTextField.stringValue
+        
+        
     }
 }

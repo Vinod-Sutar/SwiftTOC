@@ -10,8 +10,11 @@ import Cocoa
 
 class Chapter: NSObject {
     
+    
+    var guideline: Guideline!
     var id: String = ""
     var name: String = ""
+    var numTree: String = ""
     var tocName: String = ""
     var mailEnabled: Bool = false
     var PDFEnabled: Bool = false
@@ -20,10 +23,12 @@ class Chapter: NSObject {
     var textColor = NSColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
     
     override init() {
+        
     }
     
-    init(_ chapterDictionary: NSDictionary) {
+    init(_ guideline: Guideline, chapterDictionary: NSDictionary) {
         
+        self.guideline = guideline
         id = chapterDictionary["id"] as! String
         name = chapterDictionary["name"] as! String
         htmlPage = chapterDictionary["htmlPage"] as! String
@@ -38,6 +43,26 @@ class Chapter: NSObject {
             PDFEnabled = isPDFEnabled as! Bool
         }
         
+    }
+    
+    init(_ guideline: Guideline, oldChapterDictionary: NSDictionary) {
+    
+        
+        self.guideline = guideline
+        id = oldChapterDictionary["id"] as! String
+        name = oldChapterDictionary["nametree"] as! String
+        numTree = oldChapterDictionary["numtree"] as! String
+        htmlPage = oldChapterDictionary["htmlpage"] as! String
+        
+        if let isMailEnabled = oldChapterDictionary["emailContent"] {
+            
+            mailEnabled = isMailEnabled as! Bool
+        }
+        
+        if let isPDFEnabled = oldChapterDictionary["haspdf"] {
+            
+            PDFEnabled = isPDFEnabled as! Bool
+        }
     }
     
     func tocDisplayName() -> String {

@@ -109,6 +109,7 @@ class ChapterEditViewController: NSViewController {
     
     func postChapterUpdatedNotification() {
         
+        currentEditChapter.guideline.updateConnectedPeers()
         NotificationCenter.default.post(name: NSNotification.Name("GuidelineListUpdate"), object: nil)
     }
 }

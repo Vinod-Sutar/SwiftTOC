@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				494E892D1F6FE92C009C6A05 /* App.swift */,
-				494E892E1F6FE92C009C6A05 /* Chapter.swift */,
 				494E892F1F6FE92C009C6A05 /* Guideline.swift */,
+				494E892E1F6FE92C009C6A05 /* Chapter.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";

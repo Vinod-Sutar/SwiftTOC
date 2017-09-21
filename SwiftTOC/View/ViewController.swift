@@ -302,14 +302,15 @@ extension ViewController : GuidelineTOCDownloaderDelegate {
     
     func didReceivedGuidelineTOC(_ guideline: Guideline, rootChapters: NSArray) {
         
-        guideline.rootChapters = rootChapters;
+        guideline.rootChaptersData = rootChapters;
+        
         
         if app.pendingGuidelines.first == guideline {
             
             app.guidelines.append(app.pendingGuidelines.removeFirst())
         }
         
-        downloadGuidelineTocIfNeeded()
+        //downloadGuidelineTocIfNeeded()
         
         self.performSelector(onMainThread: #selector(addToTreeController), with:guideline, waitUntilDone: false)
     }
@@ -324,20 +325,22 @@ extension ViewController : GuidelineTOCDownloaderDelegate {
         
         let dict:NSMutableDictionary = NSMutableDictionary(dictionary: root)
         
-        let rootChapters = TocCreator().getRootChapter(guideline, rootChapters: guideline.rootChapters)
+        guideline.rootChapters = TocCreator().getRootChapter(guideline, rootChapters: guideline.rootChaptersData)
         
-        dict.setObject(rootChapters!, forKey: "chapters" as NSCopying)
+        guideline.exportTocJson()
+        
+        dict.setObject(guideline.rootChapters, forKey: "chapters" as NSCopying)
         
         treeController.addObject(dict)
         
         if app.pendingGuidelines.count == 0 {
             
             loadingLabel.stringValue = ""
-            tocOutlineView.isEnabled = true
+            //tocOutlineView.isEnabled = true
         }
         else {
             
-            tocOutlineView.isEnabled = false
+            //tocOutlineView.isEnabled = false
             loadingLabel.stringValue = "Loading: \(app.guidelines.count)/\(app.guidelines.count + app.pendingGuidelines.count)"
         }
         

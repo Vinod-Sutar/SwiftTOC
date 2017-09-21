@@ -17,21 +17,9 @@ class TocCreator: NSObject {
     
     func getRootChapter(_ guideline: Guideline, rootChapters: NSArray) -> [Chapter]! {
         
-        do {
-            
-            let rootChapter = Chapter();
-            
-            return createTreeWithOldTOC(guideline, chapter:rootChapter, chapterArray: rootChapters).chapters
-            
-            //return createTreeWithNewTOC(guideline, chapter:rootChapter, chapterArray: rootChapters!).chapters
-            
-        } catch let error {
-            
-            print("Error!! Unable to parse  \(error.localizedDescription)")
-            
-        }
+        let rootChapter = Chapter();
         
-        return nil
+        return createTreeWithOldTOC(guideline, chapter:rootChapter, chapterArray: rootChapters).chapters
     }
     
     

@@ -93,4 +93,24 @@ class Chapter: NSObject {
         name = chapterName
     }
     
+    func getJsonObject() -> NSDictionary {
+        
+        let childChaptersJsonObject:NSMutableArray = []
+        
+        for chapter in chapters {
+            
+            childChaptersJsonObject.add(chapter.getJsonObject())
+        }
+        
+        let chapterJsonObject = [
+            "id": id,
+            "name": name,
+            "htmlPage": htmlPage,
+            "chapters": childChaptersJsonObject
+        ] as [String:Any]
+        
+        
+        return chapterJsonObject as NSDictionary
+    }
+    
 }
